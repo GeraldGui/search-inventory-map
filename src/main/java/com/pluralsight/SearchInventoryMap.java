@@ -21,6 +21,7 @@ public class SearchInventoryMap {
 
             System.out.print("What item # are you interested in? ");
             int id = scanner.nextInt();
+            scanner.nextLine();
 
             Product matchedProduct = inventory.get(id);
 
@@ -30,7 +31,7 @@ public class SearchInventoryMap {
                 System.out.printf("We carry %s and the price is $%.2f",
                         matchedProduct.getName(), matchedProduct.getPrice());
             }
-            System.out.print("Do you want to search again? ");
+            System.out.print("\nDo you want to search again? ");
             command = scanner.nextLine();
         }
         System.out.println("Have a good day!");
